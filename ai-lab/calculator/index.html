@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A simple calculator for everyday arithmetic.">
+  <title>Simple Calculator</title>
+  <style>
+    *{box-sizing:border-box}body{margin:0;min-height:100vh;display:grid;place-items:center;padding:24px;background:#f1f4f8;color:#18243b;font:16px/1.5 system-ui,sans-serif}main{width:100%;max-width:480px;padding:36px;background:white;border:1px solid #e2e7ef;border-radius:24px;box-shadow:0 16px 50px #25385b0c}.badge{color:#5268c5;font-size:12px;font-weight:700;letter-spacing:2px}h1{font-size:32px;letter-spacing:-1px;margin:12px 0 4px}p{color:#68758b;margin:0 0 28px}label{display:block;font-size:14px;font-weight:600;margin:18px 0 7px}input,select,button{font:inherit;border-radius:10px;min-height:48px}input,select{width:100%;padding:12px;border:1px solid #cbd3e0;background:#fff;color:inherit}input:focus,select:focus,button:focus-visible{outline:3px solid #adbaff;outline-offset:2px}.buttons{display:flex;gap:12px;margin-top:24px}button{cursor:pointer;padding:12px 20px;border:0;font-weight:600}button[type=submit]{flex:1;background:#4058d4;color:white}button[type=submit]:hover{background:#3046b8}button[type=reset]{background:#edf0f6;color:#34415a}.answer{margin-top:28px;background:#f4f6fc;border:1px solid #e4e8f5;border-radius:14px;padding:20px}.answer span{font-size:12px;letter-spacing:1px;color:#68758b;text-transform:uppercase}output{display:block;font-size:30px;font-weight:600;overflow-wrap:anywhere;margin-top:6px}output[data-error=true]{color:#b42318;font-size:16px}footer{margin-top:22px;color:#7c879a;font-size:12px;text-align:center}@media(max-width:400px){main{padding:24px}}
+  </style>
+  <script src="calculator.js" defer></script>
+</head>
+<body>
+  <main>
+    <div class="badge">EVERYDAY TOOLS</div>
+    <h1>Simple calculator</h1>
+    <p>A little clarity for your everyday numbers.</p>
+    <form>
+      <label for="first">First number</label>
+      <input id="first" name="first" type="number" step="any" placeholder="e.g. 24" required>
+      <label for="operation">Operation</label>
+      <select id="operation" name="operation">
+        <option value="+">+ Addition</option>
+        <option value="-">− Subtraction</option>
+        <option value="*">× Multiplication</option>
+        <option value="/">÷ Division</option>
+        <option value="%">% Remainder</option>
+        <option value="**">xʸ Power</option>
+      </select>
+      <label for="second">Second number</label>
+      <input id="second" name="second" type="number" step="any" placeholder="e.g. 6" required>
+      <div class="buttons"><button type="submit">Calculate =</button><button type="reset">Clear</button></div>
+    </form>
+    <div class="answer"><span>Result</span><output id="result" aria-live="polite" aria-atomic="true">—</output></div>
+    <footer>Press Enter to calculate · Your numbers stay in your browser</footer>
+  </main>
+</body>
+</html>

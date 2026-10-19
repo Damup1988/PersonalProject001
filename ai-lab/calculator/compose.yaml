@@ -1,0 +1,7 @@
+services:
+  calculator:
+    build: .
+    container_name: calculator-web
+    ports:
+      - "80:80"
+    restart: unless-stopped
